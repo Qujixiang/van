@@ -1,0 +1,146 @@
+.markdown-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #dedede;
+}
+
+/* Toolbar Style Begin */
+.markdown-container > .markdown-toolbar {
+  box-sizing: border-box;
+  padding: .5em;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: #fcfcfc;
+  border-bottom: 2px solid #dedede;
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  user-select: none;
+}
+
+.markdown-container > .markdown-toolbar > .markdown-tool-button {
+  width: 1.25em;
+  height: 1.25em;
+  margin: 0 0.625em;
+}
+
+.markdown-container > .markdown-toolbar > .markdown-tool-button:hover {
+  background-color: #e8e9e9;
+  cursor: pointer;
+}
+
+.markdown-container > .markdown-toolbar > .markdown-preview-button {
+  margin-left: auto;
+}
+/* Toolbar Style End */
+
+/* Editor Style Begin */
+.markdown-container > .markdown-editor {
+  box-sizing: border-box;
+  padding: .5em;
+  resize: none;
+  overflow-y: scroll;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  white-space: pre;
+}
+
+.markdown-container > .markdown-editor .markdown-tab-area {
+  background-color: #3390ff;
+  border: 1px solid #ffffff;
+}
+/* Editor Style End */
+
+/* Previewer Style Begin */
+.markdown-container > .markdown-previewer table {
+  border-collapse: collapse;
+  border-top: 1px solid #a0a0a0;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+.markdown-container > .markdown-previewer table thead th {
+  border-bottom: 1px solid #a0a0a0;
+}
+
+.markdown-container > .markdown-previewer table th,
+.markdown-container > .markdown-previewer table td {
+  padding: .25em;
+  height: 1.5em;
+  min-width: 3em;
+  white-space: pre-wrap;
+}
+
+.markdown-container > .markdown-previewer {
+  box-sizing: border-box;
+  padding: .5em;
+  background-color: #fafafa;
+  overflow-y: scroll;
+}
+
+.markdown-container > .markdown-previewer pre {
+  margin: 0 0 1em 0;
+  padding: 1em;
+  background-color: #282c34;
+  color: #ffffff;
+  overflow-x: auto;
+}
+
+.markdown-container > .markdown-previewer pre code {
+  color: #abb2bf;
+}
+
+.markdown-container > .markdown-previewer img {
+  max-width: 100%;
+}
+
+.markdown-container > .markdown-previewer .lang-title {
+  padding: 1em;
+  font-size: 0.8em;
+  color: #bbbbbb;
+  background-color: #282c34;
+  border-bottom: 1px solid #5c6370;
+}
+/* Previewer Style End */
+
+/* Firefox滚动条 */
+.markdown-container > .markdown-editor {
+  scrollbar-width: thin;
+  scrollbar-color: #bebebe #e6e6e6;
+  cursor: default;
+}
+
+.markdown-container > .markdown-previewer {
+  scrollbar-width: thin;
+  scrollbar-color: #bebebe #e6e6e6;
+  cursor: default;
+}
+
+/* webkit引擎滚动条 */
+::-webkit-scrollbar {
+  background-color: #e6e6e6;
+  width: 10px;
+  height: 10px;
+  cursor: default;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  cursor: default;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bebebe;
+  border-radius: 5px;
+  cursor: default;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+  cursor: default;
+}
